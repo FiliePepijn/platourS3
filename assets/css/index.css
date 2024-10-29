@@ -1,0 +1,158 @@
+@import url("https://use.typekit.net/gyq5jpu.css");
+
+:root {
+  --red: #f05454;
+  --blue: #23accf;
+  --darkblue: #222830;
+  --beige: #edd8c5;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* Your CSS */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+  font-family: rig-sans, sans-serif;
+  background-color: var(--darkblue);
+}
+
+/*
+ *   Navigation Styling
+ */
+
+ nav {
+    position: fixed; /* Keeps the navbar fixed on top */
+    top: 5%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100; /* Increase z-index to ensure it's above other elements */
+  }
+
+
+
+
+/* Tabs container styling */
+.nav-items {
+  display: flex;
+  position: relative;
+  background-color: var(--beige);
+  padding: 0.5rem;
+  border-radius: 40px;
+}
+
+.nav-items * {
+  z-index: 2;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  transition: background-color 0.35s ease-in-out;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: color 0.35s ease-in-out;
+}
+
+input[id="radio-1"]:checked ~ .glider {
+  transform: translateX(0);
+}
+
+input[id="radio-2"]:checked ~ .glider {
+  transform: translateX(100%);
+}
+
+input[id="radio-3"]:checked ~ .glider {
+  transform: translateX(200%);
+}
+
+/* Updated Glider Styling */
+.glider {
+  position: absolute;
+  display: flex;
+  height: 54px;
+  width: 200px;
+  background-color: var(--red);
+  z-index: 1;
+  border-radius: 40px;
+  transition: transform 0.75s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/*
+ * Image container styling
+ */
+
+ .img-container {
+    position: relative;
+    z-index: 1; /* Lower z-index so it's beneath the navbar */
+  }
+
+.svg-background {
+  top: 0;
+  left: 0;
+
+  z-index: -1; /* Make sure it's behind other content */
+  overflow: hidden; /* Prevent any overflow */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  height: 200vh; /* Make sure there's enough content to scroll */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional, for readability */
+}
+
+.header-svg {
+    position: relative;
+    z-index: 0; /* Ensure the SVG stays below the navbar */
+  }
+
+
+  /* Disable pointer events for SVG to ensure smooth scrolling */
+  .cls-1-p {
+    pointer-events: none;
+  }
+  
+  /* Overlay to capture scroll events over the whole page */
+  .scroll-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none; /* Allow clicks to pass through */
+  }
+  
+
+@media (max-width: 700px) {
+  .nav-items {
+    transform: scale(0.6);
+  }
+}
