@@ -14,6 +14,7 @@
   "dependencies": {
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
-    "pagepiling.js": "^1.5.6"
+    "pagepiling.js": "^1.5.6",
+    "swup": "^4.8.1"
   }
 }

@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platour.net</title>
+    
+</head>
 <body>
     <!-- Background SVG Container -->
     <div class="background-svg" id="container">
@@ -29,37 +37,46 @@
         </svg>
     </div>
 
-    <!-- Your navigation and other sections -->
+    <!-- Navigation -->
     <nav>
         <div class="nav-items">
             <input type="radio" id="radio-1" name="tabs" checked />
-            <label class="item" for="radio-1" data-target="home-section">Home</label>
+            <label class="item" for="radio-1" data-target="home">Projects</label>
             <input type="radio" id="radio-2" name="tabs" />
-            <label class="item" for="radio-2" data-target="about-section">About</label>
+            <label class="item" for="radio-2" data-target="about">About</label>
             <input type="radio" id="radio-3" name="tabs" />
-            <label class="item" for="radio-3" data-target="contact-section">Contact</label>
+            <label class="item" for="radio-3" data-target="contact">Contact</label>
             <span class="glider"></span>
         </div>
     </nav>
+    
 
 
-    <!-- Page Piling Sections -->
-    <div id="pagepiling">
-        <div id="home" class="section">
-            <h1>Home</h1>
-            <p>Welcome to the home section.</p>
+    <div id="content">
+        <div id="projects" class="section">
+            <h1>PROJECTS</h1>
+            <p>Welcome to my website</p>
+            <a href="./assets/pages/projects.html"><button>--></button></a>
         </div>
         
         <div id="about" class="section">
             <h1>ABOUT</h1>
-            <p>Click here -&gt;</p>
+            <p>Hi, I'm a web developer</p>
+            <a href="./assets/pages/about.html"><button>--></button></a>
         </div>
-
+        
+    
         <div id="contact" class="section">
-            <h1>Contact</h1>
-            <p>Contact us at...</p>
+            <h1>CONTACT</h1>
+            <p>Contact if you want to work with me</p>
+            <a href="./assets/pages/about.html"><button>--></button></a>
         </div>
     </div>
-
+    
+<script type="module" src="./assets/js/swup.js"></script>
     <script type="module" src="main.js"></script>
 </body>
+
+
+
+
