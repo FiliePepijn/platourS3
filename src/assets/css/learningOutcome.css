@@ -6,7 +6,7 @@
     padding-left: 13rem;
 }
 
-.layout .content {
+.layout .content-text {
     width: 80%;
     background-color: var(--red);
     justify-self: center;
@@ -15,3 +15,7 @@
     height: 100rem;
     margin-top: 50px;
 }
+
+
+
+    

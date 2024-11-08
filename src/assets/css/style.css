@@ -1,0 +1,197 @@
+@import url("https://use.typekit.net/gyq5jpu.css");
+
+:root {
+    --red: #f05454;
+    --blue: #23accf;
+    --darkblue: #222830;
+    --beige: #edd8c5;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: rig-sans, sans-serif;
+    background-color: var(--darkblue);
+}
+
+/* home buton */
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--beige);
+    color: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.home-button i {
+    font-size: 24px;
+}
+
+.back-button {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--beige);
+    color: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.back-button i {
+    font-size: 24px;
+}
+
+
+/* Navigation Styling */
+nav {
+    position: fixed;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-items {
+    display: flex;
+    position: relative;
+    background-color: var(--beige);
+    padding: 0.5rem;
+    border-radius: 40px;
+}
+
+.nav-items * {
+    z-index: 2;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    transition: background-color 0.35s ease-in-out;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 130px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: color 0.35s ease-in-out;
+}
+
+input[id="radio-1"]:checked ~ .glider {
+    transform: translateX(0);
+}
+
+input[id="radio-2"]:checked ~ .glider {
+    transform: translateX(100%);
+}
+
+input[id="radio-3"]:checked ~ .glider {
+    transform: translateX(200%);
+}
+
+/* Glider Styling */
+.glider {
+    position: absolute;
+    display: flex;
+    height: 40px;
+    width: 130px;
+    background-color: var(--red);
+    z-index: 1;
+    border-radius: 40px;
+    transition: transform 0.75s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.header-svg{
+    display: flex;
+    max-height: 100vh;
+    justify-self: center;
+}
+
+/* PagePiling Section Styling */
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    font-size: 2rem;
+    color: var(--beige);
+    margin-left: 5%;
+}
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.section h1 {
+    font-size: 9rem;
+}
+
+.section button {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    background-color: var(--red);
+    border: var(--beige) 2px solid;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 70px;
+    height: 50px;
+    margin: 15px;
+    text-align: center;
+    color: var(--beige);
+    transition: background-color 0.35s ease-in-out;
+}
+
+
+
+
+.section button:hover {
+    
+    background-color: var(--beige);
+    color: var(--red);
+}
+
+

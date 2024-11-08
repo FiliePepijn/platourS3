@@ -32,33 +32,36 @@ gsap.set(psvg, {
 const svgTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: psvg,
-    start: '-=15',
+    start: '-50px',
     end: '+=600',
     scrub: 1,
     pin: '.background-svg',
     onLeave: () => {
-      console.log('onLeave');
+      gsap.to(window, { scrollTo: '#projects', duration: 1, ease: 'power2.inOut' });
     },
+   
+    
   },
 });
 
 svgTimeline
   .to(psvg, {
-    duration: 2,
-    scale: 20,
-    y: '-=1700',
+    duration: 0.5,
+    scale: 10,
+    y: '-=200',
     ease: 'power1.inOut',
-  })
+  })  
+  .to(body, {
+    backgroundColor: '#f05454',
+    duration: 1,
+    ease: 'power2.inOut',
+  },"<")
   .to(psvg, {
     y: '+=500',
     duration: 1,
     ease: 'power2.inOut',
   })
-  .to(body, {
-    backgroundColor: '#f05454',
-    duration: 1,
-    ease: 'power2.inOut',
-  })
+
 
 
 // ScrollTrigger sections to emulate scroll snapping
