@@ -5,51 +5,75 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Learning-Outome-1</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/transitions.css">
+  <link rel="stylesheet" href="../css/projects.css">
   <link rel="stylesheet" href="../css/learningOutcome.css">
-  <script type="module" src="../js/swup.js"></script>
-  
+  <script type="module" src="/assets/js/swup.js"></script>
+  <script type="module" src="../../main.js" defer></script> 
 </head>
 
-<body>
+<body >
   <div class="layout">
     <a href="/" class="home-button">
       <i class="fas fa-home"></i>
     </a>
-    <a href="./projects.html" class="back-button">
-      <i class="fas fa-arrow-left"></i> Projects
-    </a>
+    
     <main id="swup" class="detail transition-main">
+      <a href="./projects.html" id="back-button" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+      </a>
       <div class="detail__header">
         <h1>
-          Lorem Ipsum
+          LO2 - Transferable production
         </h1>
+        <p class="intro" style="--index: 0; color: var(--blue);">
+          You document and comment your code using version control in a personal and team context and communicate technical recommendations.
+        </p>
       </div>
-      <div class="detail__content">
-        <p class="intro" style="--index: 0;">
-          I am so happy, my dear friend, so absorbed in the exquisite sense of
-          mere tranquil existence, that I neglect my talents. I should be
-          incapable of drawing a single stroke at the present moment.
-        </p>
-        <p class="buttons" style="--index: 1;">
-          <a href="./projects.html" class="button">←  Return to overview</a>
-        </p>
-        <p style="--index: 2;">
-          When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of
-          the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw
-          myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown
-          plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with
-          the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who
-          formed us in his own image, and the breath of that universal love which bears and sustains us, as it floats
-          around us in an eternity of blist.
-        </p>
-        <p style="--index: 3;">
-          I am so happy, my dear friend, so absorbed in the exquisite sense of
-          mere tranquil existence, that I neglect my talents. I should be
-          incapable of drawing a single stroke at the present moment; and yet I
-          feel that I never was a greater artist than now. A wonderful serenity.
-        </p>
+
+      <div class="detail-content">
+        <div class="detail-text">
+          <h1>
+            GIT
+          </h1>
+          <p class="intro" style="--index: 2;">
+            In my portfolio for semester 2 i used Vite and several npm libraries which really helped me to speed up my development process. 
+            I also used git to keep track of my changes and to work together with my team.
+            This time I will also connect my github to my domain so I can easly update my portfolio.
+          </p>
+          <p style="--index: 3;">
+            In my <a href="https://git.fhict.nl/I534787" target="_blank" rel="noopener noreferrer">GIT</a> you will find my projects and the code that i have written.
+            I have also put a readme file in each project so you can see what the project is about and how you can run it.
+          </p>
+          <h2>
+            Portfolio
+          </h2>
+          <p style="--index: 4;">
+            So for my portfolio i use <a href="https://vite.dev/" target="_blank" rel="noopener noreferrer">Vite</a> 
+            and <a href="https://www.npmjs.com/" target="_blank" >npm</a> to improve my code and get fast results.
+            You can check out my portfolio <a href="https://git.fhict.nl/I534787/portfolio-s3" target="_blank" rel="noopener noreferrer">here</a> in my gitlab repository.
+          </p>
+          <p style="--index: 5;">
+            To visualise this we made a sketch of the idea, and then I made the track with the laser cutter from the makerspace.
+            On the right you see the final product, with the running track, and the projector lines.
+          </p>
+          <h3>CloudFlare Connection</h3>
+          <p style="--index: 6;">
+            I have connected my git repository to CloudFlare so I can easily update my portfolio.
+            You can check out my domain <a href="https://www.platour.net" target="_blank" rel="noopener noreferrer">here</a>.
+        </div>
+
+        <div class="detail-img">
+          <img src="https://git-scm.com/images/logo@2x.png" alt="Git">
+          <img src="https://vite.dev/logo.svg" alt="Vite">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/800px-Npm-logo.svg.png" alt="Npm">
+        </div>
+
+        
+
+      
+        </div>
       </div>
     </main>
   </div>

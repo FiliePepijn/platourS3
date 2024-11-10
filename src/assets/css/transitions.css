@@ -13,7 +13,10 @@ html.is-animating .transition-main {
 .grid .card {
   transition: transform 250ms, background-color 150ms;
   transition-delay: calc(var(--index, 0) * 50ms), 0ms;
+ 
 }
+
+
 
 html.is-rendering .grid .card {
   transition-delay: calc((var(--count, 0) - var(--index, 0)) * 10ms), 0ms;
@@ -37,30 +40,75 @@ html.is-animating.is-rendering h1 {
   opacity: 0;
 }
 
-.detail__content {
+.detail-content {
   transition: transform 400ms;
 }
 
-html.is-animating.is-leaving .detail__content {
+.back-button, .home-button {
+  transform: transform 300ms;
+}
+
+html.is-animating.is-leaving .detail-content {
   transform: translateY(3rem);
 }
 
-html.is-animating.is-rendering .detail__content {
+html.is-animating.is-rendering .detail-content {
   transform: translateY(3rem);
 }
 
-.detail__content>* {
+.detail-content>* {
   transition: opacity 300ms, transform 300ms;
   transition-delay: calc(0ms + (2 - var(--index, 0)) * 75ms);
+  
 }
 
-html.is-animating .detail__content>* {
+html.is-animating .detail-content>* {
   opacity: 0;
   transform: translateY(calc((var(--index, 0) + 1) * 2em));
   transition-delay: 0ms;
 }
 
+#modal.is-changing {
+  transition: opacity 250ms;
+}
 
+#modal.is-animating {
+  opacity: 0;
+}
 
+/* Zoom-Effect for the detail when opening/closing the modal */
+#modal.is-changing #detail {
+  transition: transform 150ms;
+  transform: scale(1);
+}
+
+#modal.to-open-modal.is-animating #detail,
+#modal.to-close-modal.is-leaving #detail {
+  transform: scale(0.95);
+}
+
+/*
+* The animation between charcter details. Directional animation based on data-swup-animation
+*/
+#detail.is-changing {
+  transition: opacity 200ms, transform 200ms;
+}
+
+#detail.to-next {
+  --direction: 1;
+}
+
+#detail.to-previous {
+  --direction: -1;
+}
+
+#detail.is-animating {
+  opacity: 0;
+  transform: translateX(calc(40px * var(--direction)));
+}
+
+#detail.is-leaving {
+  transform: translateX(calc(40px * var(--direction) * -1));
+}
 
 

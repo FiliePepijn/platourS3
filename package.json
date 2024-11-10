@@ -12,7 +12,9 @@
     "vite": "^5.4.9"
   },
   "dependencies": {
+    "@swup/fragment-plugin": "^1.1.1",
     "@swup/head-plugin": "^2.3.0",
+    "@swup/parallel-plugin": "^0.4.0",
     "@swup/preload-plugin": "^3.2.10",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
