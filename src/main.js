@@ -2,9 +2,11 @@ import './assets/css/style.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import Clarity from '@microsoft/clarity';
 
+const projectId = "oxerwkjrw8"
 
-
+Clarity.init(projectId);
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
