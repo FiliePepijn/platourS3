@@ -15,7 +15,12 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         projects: resolve(root, 'assets/pages/projects.html'),
-        lo1:resolve(root, 'assets/pages/LO1.html')
+        lo1:resolve(root, 'assets/pages/LO1.html'),
+        lo2:resolve(root, 'assets/pages/LO2.html'),
+        lo3:resolve(root, 'assets/pages/LO3.html'),
+        lo4:resolve(root, 'assets/pages/LO4.html'),
+        lo5:resolve(root, 'assets/pages/LO5.html')
+
       }
     }
   }
