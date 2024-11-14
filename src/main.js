@@ -9,6 +9,9 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
+
+
+
 function initializeAnimations() {
   let container = document.querySelector('#container');
   let psvg = document.querySelector('#last-path');
