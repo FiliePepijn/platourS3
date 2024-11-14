@@ -11,6 +11,9 @@ Clarity.init(projectId);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
+
+
+
 function initializeAnimations() {
   let container = document.querySelector('#container');
   let psvg = document.querySelector('#last-path');
