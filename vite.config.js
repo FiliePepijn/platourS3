@@ -9,11 +9,12 @@ export default defineConfig({
   root,
   plugins: [
     Sitemap({
-      hostname: 'https://platour.pages.dev/',
+      hostname: 'https://platour.net/',
       outDir: outDir,
       routes: [
         '/',
         '/assets/pages/projects.html',
+        '/assets/pages/about.html',
         '/assets/pages/LO1.html',
         '/assets/pages/LO2.html',
         '/assets/pages/LO3.html',
