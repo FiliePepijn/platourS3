@@ -33,6 +33,7 @@ function initializeAnimations() {
   gsap.set(psvg, {
     transformOrigin: 'center',
     margin: '0',
+    justifySelf: 'center',
     padding: '0',
   });
 
@@ -40,8 +41,8 @@ function initializeAnimations() {
   const svgTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: psvg,
-      start: '-50px',
-      end: '+=600',
+      start: 'top top',
+      end: 'bottom top',
       scrub: 1,
       pin: '.background-svg',
     },
@@ -66,7 +67,7 @@ function initializeAnimations() {
     });
 
   // ScrollTrigger sections to emulate scroll snapping
-  const sections = [projects, about, contact];
+  const sections = [lo,projects, about, contact];
 
   sections.forEach((section, index) => {
     ScrollTrigger.create({
@@ -74,10 +75,10 @@ function initializeAnimations() {
       start: "top center",
       end: "bottom center",
       onEnter: () => {
-        gsap.to(window, { scrollTo: section, duration: 1, ease: "power2.inOut" });
+        gsap.to(window, { scrollTo: section, duration: 0.5, ease: "power2.inOut" });
       },
       onEnterBack: () => {
-        gsap.to(window, { scrollTo: section, duration: 1, ease: "power2.inOut" });
+        gsap.to(window, { scrollTo: section, duration: 0.5, ease: "power2.inOut" });
       },
     });
   });

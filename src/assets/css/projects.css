@@ -41,7 +41,6 @@ font-size: 24px;
 }
 
 .link {
-  text-decoration: none;
   color: var(--blue);
   font-weight: 800;
   text-decoration: underline;
@@ -52,7 +51,7 @@ font-size: 24px;
 
 
 
-a 
+a
 {
   text-decoration: none;
   color: inherit;
@@ -67,10 +66,8 @@ p {
 }
 
 h1 {
-  
-  font-size: 3rem;
+
   line-height: 1.2;
-  color: var(--blue);
   font-size: 10rem;
   margin: 0;
   color: var(--beige);
@@ -93,8 +90,7 @@ h1 {
 
 
 h2 {
-  margin: 0;
-  margin-top: 1rem;
+  margin: 1rem 0 0;
   font-size: 2.5rem;
   font-weight: 900;
   color: var(--blue);
@@ -108,8 +104,7 @@ h3 {
 }
 
 h4 {
-  margin: 0;
-  margin-top: 1rem;
+  margin: 1rem 0 0;
   font-size: 1.4rem;
   font-weight: 900;
   
@@ -136,15 +131,15 @@ h4 {
 
 
 .layout {
-  
+  justify-self: center;
+  align-self: center;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  max-width: 90vw;
-  margin: 0 auto;
-  
+
 }
+
 
 #swup {
   justify-content: center;
@@ -201,26 +196,27 @@ main a {
 }
 
 .grid {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
   grid-gap: calc(0.8em + 1vw);
-  
+  flex-direction: row;
+
+
 }
 
 .card {
   position: relative;
-  border-radius: 20px;    
+  border-radius: 20px;
   padding: .9em 1em 1.2em;
   transition: background 150ms;
   outline: var(--blue) solid 4px;
+
 
 
 }
 
 .card:hover {
   color: var(--red);
-  backdrop-filter: blur(5px); 
+  backdrop-filter: blur(5px);
   transform: translateY(-0.4em);
   background-color: var(--blue);
   transition-delay: 0ms !important; /* Remove delay on hover */
@@ -304,24 +300,36 @@ main a {
 .detail-img {
   flex: 1 1 35%;
   align-self: center;
-  padding: 2rem 2rem;
+  padding: 2rem;
   outline: var(--blue) solid 5px;
   border-radius: 40px;
   align-items: center;
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 600px;
 }
 
+
 .detail-img img {
-  max-width: 100%;
-  min-width: 25vw;
+  max-width: 30%;
+  min-width: 22vw;
   max-height: 20%;
   min-height: 40vh;
   border-radius: 40px;
-  
+
 }
 
+.color-container {
+  width: 100%;
+  border-radius:var(--BR);
+  outline: var(--blue) solid 5px;
+}
+.color-style {
+  width: 100%;
 
+  height: 20vh;
+}
 
 
 .feedpulse {
@@ -356,89 +364,64 @@ color: var(--beige);
 .intro {
 font-weight: bold;
 }
+@media (max-width: 1080px) {
+  .detail-img img {
+    width: 100%;
+    border-radius: 40px;
+  }
+  .grid {
+    flex-wrap: wrap;
+  }
+}
 
-/* Responsive flexbox for detail-content */
-@media (max-width: 1080) {
+/* Adjust the .grid layout for mobile screens */
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail {
+    flex-direction: column;
+    min-width: 280px;
+  }
+
+  .detail-img, .detail-text {
+    width: 100%;
+  }
+
   .detail-img img {
     width: 100%;
     border-radius: 40px;
   }
 }
 
-@media (max-width: 768px) {
-.detail-img img {
-  width: 100%;
+@media (max-width: 420px) {
+  .layout .projects-title {
+    font-size: 4rem;
+  }
 
-  border-radius: 40px;
-}
-}
-
-@media (max-width: 480px) {
-.detail-img  {
-  display: none;
-}
-
-
-
-
-.intro-text {
-  
-  gap: 1rem;
-  width: 100%
-}
-
-.intro-text h1 {
-  font-size: 10vw;
-}
-
-.detail-content {
-  flex-direction: row;
-  gap: 1rem;
-  width: 100%;
-}
-
-
-
-h1 {
-  font-size: 2rem;
-}
-}
-
-@media screen and (max-width: 1410px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: calc(0.8em + 1vw);
+    flex-direction: column;
+    min-width: 90%;
   }
 
-  .layout {
-    max-width: 85vw;
+  .detail {
+    flex-direction: column;
+  }
+
+  .detail-img, .detail-text {
+    width: 100%;
+  }
+
+  .detail-img img {
+    width: 100%;
+    border-radius: 40px;
+  }
+
+  .card {
+    min-width: 280px;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .grid {
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: calc(0.8em + 1vw);
-  }
-  h1 {
-    font-size: 11vw;
-  }
-  h2 {
-    font-size: 10vw;
-  }
-  
-}
-
-@media screen and (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-  }
-  
-}
-
 
 

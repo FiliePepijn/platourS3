@@ -13,7 +13,7 @@ export default defineConfig({
       outDir: outDir,
       routes: [
         '/',
-        '/assets/pages/projects.html',
+        '/assets/pages/lo.html',
         '/assets/pages/about.html',
         '/assets/pages/LO1.html',
         '/assets/pages/LO2.html',
@@ -29,7 +29,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),
-        projects: resolve(root, 'assets/pages/projects.html'),
+        projects: resolve(root, 'assets/pages/lo.html'),
         lo1: resolve(root, 'assets/pages/LO1.html'),
         lo2: resolve(root, 'assets/pages/LO2.html'),
         lo3: resolve(root, 'assets/pages/LO3.html'),
