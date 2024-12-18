@@ -5,7 +5,7 @@
     --blue: #23accf;
     --darkblue: #222830;
     --beige: #edd8c5;
-    --BR: 40px;
+    --BR: 40px; 
 }
 
 *,
@@ -19,6 +19,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 
@@ -144,7 +145,7 @@ p {
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
     background-color: var(--red);
-    border: var(--beige) 2px solid;
+    border: var(--blue) 2px solid;
     border-radius: 40px;
     cursor: pointer;
     width: 70px;
