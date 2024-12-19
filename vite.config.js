@@ -6,6 +6,9 @@ const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
 
 export default defineConfig({
+  server: {
+    port: 5173,
+  },
   root,
   plugins: [
     Sitemap({

@@ -18,6 +18,8 @@ z-index: 1000;
 font-size: 24px;
 }
 
+
+
 /* home buton */
 .home-button {
   position: fixed;
@@ -36,9 +38,7 @@ font-size: 24px;
   z-index: 1000;
 }
 
-.home-button i {
-  font-size: 24px;
-}
+
 
 .link {
   color: var(--blue);
@@ -257,13 +257,22 @@ main a {
 
 /* Content Learning outcome */
 .detail-content {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 2rem; 
   color: var(--darkblue);
   border-radius: 40px;
   justify-self: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
 }
+
+#design {
+  display: flex;
+  flex-direction: row;
+}
+
 
 
 .detail {
@@ -273,10 +282,6 @@ main a {
   margin-top: 2rem;
 }
 
-.detail-header {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-}
 
 .detail-header h1 {
   font-size: 5vw;
@@ -303,6 +308,7 @@ main a {
 
 
 .detail-img {
+
   flex: 1 1 35%;
   align-self: center;
   padding: 2rem;
@@ -317,10 +323,8 @@ main a {
 
 
 .detail-img img {
-  max-width: 30%;
+  max-width: 100%;
   min-width: 22vw;
-  max-height: 20%;
-  min-height: 40vh;
   border-radius: 40px;
 
 }
@@ -329,6 +333,7 @@ main a {
   width: 100%;
   border-radius:var(--BR);
   outline: var(--blue) solid 5px;
+  display: flex;
 }
 .color-style {
   width: 100%;
@@ -348,10 +353,11 @@ main a {
 
 .intro-text {
 
-grid-column: 1 / 2;
-padding: 2rem 2rem;
-background-color: var(--red);
-border-radius: 40px;
+
+  padding: 2rem 2rem;
+  background-color: var(--red);
+  border-radius: 40px;
+
 }
 
 .intro-text h1 {
