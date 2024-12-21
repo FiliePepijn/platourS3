@@ -18,6 +18,8 @@ z-index: 1000;
 font-size: 24px;
 }
 
+
+
 /* home buton */
 .home-button {
   position: fixed;
@@ -36,12 +38,9 @@ font-size: 24px;
   z-index: 1000;
 }
 
-.home-button i {
-  font-size: 24px;
-}
+
 
 .link {
-  text-decoration: none;
   color: var(--blue);
   font-weight: 800;
   text-decoration: underline;
@@ -52,7 +51,7 @@ font-size: 24px;
 
 
 
-a 
+a
 {
   text-decoration: none;
   color: inherit;
@@ -60,29 +59,32 @@ a
 
 p {
   margin: 0;
-  margin-top: 1rem;
+
   font-size: 1.5rem;
   line-height: 1.2;
   color: var(--beige);
 }
 
 h1 {
-  
-  font-size: 3rem;
+
   line-height: 1.2;
-  color: var(--blue);
   font-size: 10rem;
   margin: 0;
-  color: var(--beige);
+  color: var(--blue);
   padding-top: 7rem;
   padding-left: 13rem;
 }
 
+.layout {
+  width: 100%;
+  height: 100%;
+}
 
 .layout .content-text {
   width: 80%;
   background-color: var(--red);
   justify-self: center;
+  align-self: c;
   padding: 20px;
   border-radius: 40px;
   height: 100rem;
@@ -93,14 +95,13 @@ h1 {
 
 
 h2 {
-  margin: 0;
-  margin-top: 1rem;
+  margin: 1rem 0 0;
   font-size: 2.5rem;
   font-weight: 900;
-  color: var(--blue);
+  color: var(--red);
 }
 h3 {
-  margin-top: 1rem;
+  margin: 1rem 0 0 ;
   font-size: 2rem;
   font-weight: 900;
   line-height: 1.2;
@@ -108,12 +109,11 @@ h3 {
 }
 
 h4 {
-  margin: 0;
-  margin-top: 1rem;
+  margin: 1rem 0 0;
   font-size: 1.4rem;
   font-weight: 900;
   
-  color: var(--red);
+  color: var(--beige);
 
 }
 
@@ -136,15 +136,15 @@ h4 {
 
 
 .layout {
-  
+  justify-self: center;
+  align-self: center;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  max-width: 90vw;
-  margin: 0 auto;
-  
+
 }
+
 
 #swup {
   justify-content: center;
@@ -201,26 +201,27 @@ main a {
 }
 
 .grid {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
   grid-gap: calc(0.8em + 1vw);
-  
+  flex-direction: row;
+
+
 }
 
 .card {
   position: relative;
-  border-radius: 20px;    
+  border-radius: 20px;
   padding: .9em 1em 1.2em;
   transition: background 150ms;
   outline: var(--blue) solid 4px;
+
 
 
 }
 
 .card:hover {
   color: var(--red);
-  backdrop-filter: blur(5px); 
+  backdrop-filter: blur(5px);
   transform: translateY(-0.4em);
   background-color: var(--blue);
   transition-delay: 0ms !important; /* Remove delay on hover */
@@ -256,13 +257,22 @@ main a {
 
 /* Content Learning outcome */
 .detail-content {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 2rem; 
   color: var(--darkblue);
   border-radius: 40px;
   justify-self: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
 }
+
+#design {
+  display: flex;
+  flex-direction: row;
+}
+
 
 
 .detail {
@@ -272,14 +282,10 @@ main a {
   margin-top: 2rem;
 }
 
-.detail-header {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-}
 
 .detail-header h1 {
   font-size: 5vw;
-  color: var(--beige);
+  color: var(--blue);
   padding: 0;
   margin: 0;
 }
@@ -296,32 +302,90 @@ main a {
   padding: 2rem 2rem;
   background-color: var(--darkblue);
   border-radius: 40px;
-  outline: var(--beige) solid 5px;
+  outline: var(--blue) solid 5px;
+}
+
+pre {
+  background-color: var(--beige);
+  padding: 1rem;
+  border-radius: 40px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+code {
+  color: var(--red);
+  background-color: var(--beige);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
 }
 
 
 
 .detail-img {
+
   flex: 1 1 35%;
   align-self: center;
-  padding: 2rem 2rem;
+  padding: 2rem;
   outline: var(--blue) solid 5px;
   border-radius: 40px;
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  row-gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  color: var(--beige);
+  font-weight: 800;
+  font-size: 1.5rem ;
 }
+
+
+
 
 .detail-img img {
   max-width: 100%;
-  min-width: 25vw;
-  max-height: 20%;
-  min-height: 40vh;
+  min-width: 22vw;
   border-radius: 40px;
-  
+  outline: var(--red) solid 5px;
+  transition: transform 0.5s;
+  background-color: var(--darkblue);
+
+
 }
 
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.color-container {
+  width: 100%;
+  border-radius:var(--BR);
+  outline: var(--blue) solid 5px;
+  display: flex;
+}
+.color-style {
+  width: 100%;
+
+  height: 20vh;
+}
 
 
 .feedpulse {
@@ -334,11 +398,12 @@ main a {
 
 
 .intro-text {
+  
+  text-align: left; /* Added this line */
+  padding: 2rem 2rem;
+  background-color: var(--red);
+  border-radius: 40px;
 
-grid-column: 1 / 2;
-padding: 2rem 2rem;
-background-color: var(--red);
-border-radius: 40px;
 }
 
 .intro-text h1 {
@@ -356,89 +421,64 @@ color: var(--beige);
 .intro {
 font-weight: bold;
 }
+@media (max-width: 1080px) {
+  .detail-img img {
+    width: 100%;
+    border-radius: 40px;
+  }
+  .grid {
+    flex-wrap: wrap;
+  }
+}
 
-/* Responsive flexbox for detail-content */
-@media (max-width: 1080) {
+/* Adjust the .grid layout for mobile screens */
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail {
+    flex-direction: column;
+    min-width: 280px;
+  }
+
+  .detail-img, .detail-text {
+    width: 100%;
+  }
+
   .detail-img img {
     width: 100%;
     border-radius: 40px;
   }
 }
 
-@media (max-width: 768px) {
-.detail-img img {
-  width: 100%;
+@media (max-width: 420px) {
+  .layout .projects-title {
+    font-size: 4rem;
+  }
 
-  border-radius: 40px;
-}
-}
-
-@media (max-width: 480px) {
-.detail-img  {
-  display: none;
-}
-
-
-
-
-.intro-text {
-  
-  gap: 1rem;
-  width: 100%
-}
-
-.intro-text h1 {
-  font-size: 10vw;
-}
-
-.detail-content {
-  flex-direction: row;
-  gap: 1rem;
-  width: 100%;
-}
-
-
-
-h1 {
-  font-size: 2rem;
-}
-}
-
-@media screen and (max-width: 1410px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: calc(0.8em + 1vw);
+    flex-direction: column;
+    min-width: 90%;
   }
 
-  .layout {
-    max-width: 85vw;
+  .detail {
+    flex-direction: column;
+  }
+
+  .detail-img, .detail-text {
+    width: 100%;
+  }
+
+  .detail-img img {
+    width: 100%;
+    border-radius: 40px;
+  }
+
+  .card {
+    min-width: 280px;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .grid {
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: calc(0.8em + 1vw);
-  }
-  h1 {
-    font-size: 11vw;
-  }
-  h2 {
-    font-size: 10vw;
-  }
-  
-}
-
-@media screen and (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-  }
-  
-}
-
 
 
