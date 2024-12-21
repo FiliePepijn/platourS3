@@ -18,6 +18,7 @@
     "@swup/head-plugin": "^2.3.0",
     "@swup/parallel-plugin": "^0.4.0",
     "@swup/preload-plugin": "^3.2.10",
+    "@swup/scripts-plugin": "^2.1.0",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "pagepiling.js": "^1.5.6",
