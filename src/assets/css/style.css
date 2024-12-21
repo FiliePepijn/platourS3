@@ -16,7 +16,6 @@
 
 html,
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -145,7 +144,7 @@ p {
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
     background-color: var(--red);
-    border: var(--blue) 2px solid;
+    border: var(--beige) 2px solid;
     border-radius: 40px;
     cursor: pointer;
     width: 70px;
