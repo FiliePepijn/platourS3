@@ -1,6 +1,8 @@
 import Swup from 'swup';
 import SwupScriptsPlugin from '@swup/scripts-plugin';
 
+
+
 const swup = new Swup({
     containers: ['#swup'], 
     plugins: [
@@ -49,8 +51,11 @@ function initializeOverlay() {
 
 
 swup.hooks.on('page:view', () => {
+    
     console.log('Page view detected');
     initializeOverlay();
+
+    
 });
 
 initializeOverlay();
