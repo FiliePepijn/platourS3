@@ -439,7 +439,6 @@ font-weight: bold;
   }
 
   .detail {
-    flex-direction: column;
     min-width: 280px;
   }
 
@@ -460,11 +459,15 @@ font-weight: bold;
 
   .grid {
     flex-direction: column;
-    min-width: 90%;
+    min-width: 80%;
   }
 
   .detail {
     flex-direction: column;
+  }
+
+  .detail-content {
+    max-width:100%
   }
 
   .detail-img, .detail-text {
