@@ -31,22 +31,39 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
+
+
+        // html
         main: resolve(root, 'index.html'),
         lo: resolve(root, 'assets/pages/lo.html'),
+        404: resolve(root, 'assets/pages/404.html'),
+        development: resolve(root, 'assets/pages/development.html'),
+
+
+        // projects
         projects: resolve(root, 'assets/pages/projects.html'),
         about: resolve(root, 'assets/pages/about.html'),
         CBR: resolve(root, 'assets/pages/CBR.html'),
         portfolio: resolve(root, 'assets/pages/portfolio.html'),
         Holosports: resolve(root, 'assets/pages/Holo-sports.html'),
         Solaria: resolve(root, 'assets/pages/solaria.html'),
-        404: resolve(root, 'assets/pages/404.html'),
-        development: resolve(root, 'assets/pages/development.html'),
+
+        // Learning outcomes
         lo1: resolve(root, 'assets/pages/LO1.html'),
         lo2: resolve(root, 'assets/pages/LO2.html'),
         lo3: resolve(root, 'assets/pages/LO3.html'),
         lo4: resolve(root, 'assets/pages/LO4.html'),
         lo5: resolve(root, 'assets/pages/LO5.html'),
-        fbxloader: resolve(root, 'assets/js/fbxloader.js'),
+
+
+        // css
+        style: resolve(root, 'assets/css/style.css'), 
+        transitions: resolve(root, 'assets/css/transitions.css'),
+        aboutstyle: resolve(root, 'assets/css/about.css'),
+        projectsstyle: resolve(root, 'assets/css/projects.css'),
+
+
+
 
 
       }
