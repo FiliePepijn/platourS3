@@ -37,7 +37,7 @@ function initializeAnimations() {
   // GSAP timeline for SVG animations
   const svgTimeline = gsap.timeline({
     scrollTrigger: {
-      trigger: psvg,
+      trigger: container,
       start: 'top top',
       end: 'bottom top',
       scrub: 1,
@@ -50,6 +50,7 @@ function initializeAnimations() {
       duration: 0.5,
       scale: 10,
       y: '-=200',
+      rotate: 360,
       ease: 'power1.inOut',
     })  
     .to(body, {

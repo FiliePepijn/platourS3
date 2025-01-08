@@ -21,8 +21,10 @@
     "@swup/scripts-plugin": "^2.1.0",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
+    "lil-gui": "^0.20.0",
     "pagepiling.js": "^1.5.6",
     "swup": "^4.8.1",
+    "three": "^0.172.0",
     "vite-plugin-static-copy": "^2.0.0"
   }
 }

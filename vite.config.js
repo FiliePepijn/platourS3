@@ -45,7 +45,8 @@ export default defineConfig({
         lo2: resolve(root, 'assets/pages/LO2.html'),
         lo3: resolve(root, 'assets/pages/LO3.html'),
         lo4: resolve(root, 'assets/pages/LO4.html'),
-        lo5: resolve(root, 'assets/pages/LO5.html')
+        lo5: resolve(root, 'assets/pages/LO5.html'),
+        fbxloader: resolve(root, 'assets/js/fbxloader.js'),
 
 
       }

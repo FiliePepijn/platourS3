@@ -156,7 +156,26 @@ p {
 }
 
 
+.full-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
+canvas.webgl {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.webgl {
+
+    animation: smoothSlide 1.5s ease-out forwards;
+  }
+  
 
 .section button:hover {
     
