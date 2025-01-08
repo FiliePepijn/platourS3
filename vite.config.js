@@ -46,7 +46,13 @@ export default defineConfig({
         lo3: resolve(root, 'assets/pages/LO3.html'),
         lo4: resolve(root, 'assets/pages/LO4.html'),
         lo5: resolve(root, 'assets/pages/LO5.html'),
-        fbxloader: resolve(root, 'assets/js/fbxloader.js'),
+        
+
+        // css
+        style: resolve(root, 'assets/css/style.css'),
+        aboutcss: resolve(root, 'assets/css/about.css'),
+        projectscss: resolve(root, 'assets/css/projects.css'),
+        transitions: resolve(root, 'assets/css/transitions.css'),
 
 
       }

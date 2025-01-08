@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { PCDLoader } from 'three/examples/jsm/loaders/PCDLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { gsap } from 'gsap';
-import pcd from '/fbx/PepijnPCD.pcd?url';
+import pcd from '/pcd/PepijnPCD.pcd?url';
 
 const canvas = document.querySelector('canvas.webgl');
 if (!canvas) {
