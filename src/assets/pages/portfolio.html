@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/assets/css/transitions.css">
   <link rel="stylesheet" href="/assets/css/projects.css">
   <script type="module" src="/assets/js/swup.js"></script>
+  
   <script src="https://kit.fontawesome.com/7a96991620.js" crossorigin="anonymous"></script>
 </head>
 
@@ -106,7 +107,7 @@
           <p >
             Next, I chose colours for my website. Picking the right colours is 
             important because they can make people feel different things when they look at my work. 
-            <a href="https://docs.google.com/document/d/1lUJ0idMpxbTaoDOCkipwMJRsJC0PTFsjuc4KpvLph00/edit?usp=sharing" target="_blank" class="link"></a> Here you see the colors I picked and why i picked them.
+            <a href="https://docs.google.com/document/d/1lUJ0idMpxbTaoDOCkipwMJRsJC0PTFsjuc4KpvLph00/edit?usp=sharing" target="_blank" class="link">Here</a> you see the colors I picked and why i picked them.
           </p>
         </div>
 
@@ -116,7 +117,7 @@
           </h2>
           <p>
             I started designing my portfolio in a program called Figma. 
-            At first, I just made a rough design of where everything would go. 
+            At first, I just made a rough design of where everything would go. you can find this <a class="link" href="https://www.figma.com/design/ZQXDljnodBCslMaI8aGBxT/Portfolio-2?node-id=0-1&t=uEkqhx1UggCV6530-1" target="_blank" rel="noopener noreferrer"></a> 
             I showed it to my teacher for feedback.
             They told me it was a good start, 
             but I should focus on the structure for now because 
@@ -137,6 +138,11 @@
             colours and details.
           </p>
 
+        </div>
+
+        <div class="detail-img">
+          <img src="/img/Portfolio/portfolio-rough-design.png" alt="portfolio-rough-design">
+          <img src="/img/Portfolio/portfolio-rough-design1.png" alt="portfolio-rough-design">
         </div>
 
         <div class="detail-text">
@@ -204,7 +210,6 @@
           <h1>
             develop & deliver
           </h1>
-          
         </div>
 
         <div class="detail-text">
@@ -226,53 +231,7 @@
         </div>
 
         <div class="detail-img">
-          <pre>
-            <code>
-    // Set initial properties for SVG and background
-    gsap.set('.background-svg', {
-      transformOrigin: 'center',
-      margin: '0',
-      padding: '0',
-      height: '100vh',
-    });
-  
-    gsap.set(psvg, {
-      transformOrigin: 'center',
-      margin: '0',
-      justifySelf: 'center',
-      padding: '0',
-    });
-  
-    // GSAP timeline for SVG animations
-    const svgTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: psvg,
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1,
-        pin: '.background-svg',
-      },
-    });
-  
-    svgTimeline
-      .to(psvg, {
-        duration: 0.5,
-        scale: 10,
-        y: '-=200',
-        ease: 'power1.inOut',
-      })  
-      .to(body, {
-        backgroundColor: '#f05454',
-        duration: 1,
-        ease: 'power2.inOut',
-      },'<!-- < -->')
-      .to(psvg, {
-        y: '+=500',
-        duration: 1,
-        ease: 'power2.inOut',
-      });
-            </code>
-          </pre>
+          <img src="/img/Portfolio/GSAP.png" alt="CBR">
         </div> 
       </div>
     </main>
