@@ -27,19 +27,8 @@ export default defineConfig({
     }),
   ],
   build: {
-    outDir,
-    emptyOutDir: true,
     rollupOptions: {
       input: {
-
-
-        // html
-        main: resolve(root, 'index.html'),
-        lo: resolve(root, 'assets/pages/lo.html'),
-        404: resolve(root, 'assets/pages/404.html'),
-        development: resolve(root, 'assets/pages/development.html'),
-
-
         // projects
         projects: resolve(root, 'assets/pages/projects.html'),
         about: resolve(root, 'assets/pages/about.html'),
@@ -54,7 +43,6 @@ export default defineConfig({
         lo3: resolve(root, 'assets/pages/LO3.html'),
         lo4: resolve(root, 'assets/pages/LO4.html'),
         lo5: resolve(root, 'assets/pages/LO5.html'),
-        
 
         // css
         style: resolve(root, 'assets/css/style.css'),
@@ -62,8 +50,13 @@ export default defineConfig({
         projectscss: resolve(root, 'assets/css/projects.css'),
         transitions: resolve(root, 'assets/css/transitions.css'),
 
-
-      }
-    }
-  }
+        // js
+        loadFBX: resolve(root, 'assets/js/loadFBX.js'),
+      },
+      external: [
+        '/src/assets/js/loadFBX.js',
+        // Add other external modules if needed
+      ],
+    },
+  },
 });
