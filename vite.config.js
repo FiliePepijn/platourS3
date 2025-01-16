@@ -1,5 +1,6 @@
-import { resolve } from 'path';
+import { isAbsolute, resolve } from 'path';
 import { defineConfig } from 'vite';
+import Sitemap from 'vite-plugin-sitemap';
 
 const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
@@ -9,43 +10,67 @@ export default defineConfig({
     port: 5173,
   },
   root,
+  plugins: [
+    Sitemap({
+      hostname: 'https://platour.net/',
+      outDir: outDir,
+      routes: [
+        '/',
+        '/assets/pages/lo.html',
+        '/assets/pages/about.html',
+        '/assets/pages/LO1.html',
+        '/assets/pages/LO2.html',
+        '/assets/pages/LO3.html',
+        '/assets/pages/LO4.html',
+        '/assets/pages/LO5.html',
+        '/assets/pages/projects.html',
+        '/assets/pages/projects/CBR.html',
+        '/assets/pages/projects/Holo-sports.html',
+        '/assets/pages/projects/passion-project.html',
+        '/assets/pages/projects/portfolio.html',
+        '/assets/pages/projects/solaria.html',
+        '/assets/pages/404.html',
+      ]
+    }),
+  ],
   build: {
+    chunkSizeWarningLimit: 1000,
     outDir,
     emptyOutDir: true,
-    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       input: {
-        // Define HTML pages
-        index: resolve(root, 'index.html'),
+
+
+        // pages
+        main: resolve(root, 'index.html'),
+        lo: resolve(root, 'assets/pages/lo.html'),
+        404: resolve(root, 'assets/pages/404.html'),
         projects: resolve(root, 'assets/pages/projects.html'),
         about: resolve(root, 'assets/pages/about.html'),
+
+
+        // projects
         CBR: resolve(root, 'assets/pages/CBR.html'),
-        portfolio: resolve(root, 'assets/pages/portfolio.html'),
-        Holosports: resolve(root, 'assets/pages/Holo-sports.html'),
-        Solaria: resolve(root, 'assets/pages/solaria.html'),
-        lo: resolve(root, 'assets/pages/LO.html'),
+        HoloSports : resolve(root, 'assets/pages/Holo-sports.html'),
         passionproject: resolve(root, 'assets/pages/passion-project.html'),
+        portfolio: resolve(root, 'assets/pages/portfolio.html'),
+        solaria: resolve(root, 'assets/pages/solaria.html'),
+        
+        // LO
+        LO1: resolve(root, 'assets/pages/LO1.html'),
+        LO2: resolve(root, 'assets/pages/LO2.html'),
+        LO3: resolve(root, 'assets/pages/LO3.html'),
+        LO4: resolve(root, 'assets/pages/LO4.html'),
+        LO5: resolve(root, 'assets/pages/LO5.html'),
 
-        // Learning Outcomes
-        lo1: resolve(root, 'assets/pages/LO1.html'),
-        lo2: resolve(root, 'assets/pages/LO2.html'),
-        lo3: resolve(root, 'assets/pages/LO3.html'),
-        lo4: resolve(root, 'assets/pages/LO4.html'),
-        lo5: resolve(root, 'assets/pages/LO5.html'),
-
-        // CSS
+        // css
         style: resolve(root, 'assets/css/style.css'),
-        aboutcss: resolve(root, 'assets/css/about.css'),
         projectscss: resolve(root, 'assets/css/projects.css'),
         transitions: resolve(root, 'assets/css/transitions.css'),
+        aboutcss: resolve(root, 'assets/css/about.css'),
 
-        // JavaScript
-        loadFBX: resolve(root, 'assets/js/loadFBX.js'),
-      },
-      external: [
-        '/src/assets/js/loadFBX.js', // External JS modules
-      ],
-    },
-  },
-  plugins: [],
+
+      }
+    }
+  }
 });
