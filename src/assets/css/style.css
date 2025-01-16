@@ -172,14 +172,22 @@ canvas.webgl {
 }
 
 #loading-screen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position:relative;  
     font-size: 24px;
     color: white;
+    display: flex; /* Ensure it's set to flex for visibility */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8); /* Optional: overlay background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#loading-screen.hidden {
     display: none;
-  }
+}
+
 
 .webgl {
 
