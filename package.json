@@ -9,7 +9,8 @@
     "preview": "vite preview --port 3000"
   },
   "devDependencies": {
-    "vite": "^5.4.9"
+    "vite": "^5.4.11",
+    "vite-plugin-sitemap": "^0.7.1"
   },
   "dependencies": {
     "@microsoft/clarity": "^1.0.0",
@@ -23,7 +24,6 @@
     "jquery": "^3.7.1",
     "lil-gui": "^0.20.0",
     "pagepiling.js": "^1.5.6",
-    "sitemap-generator": "^8.5.1",
     "swup": "^4.8.1",
     "three": "^0.172.0",
     "vite-plugin-static-copy": "^2.0.0"

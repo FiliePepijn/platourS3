@@ -1,30 +1,10 @@
-import { isAbsolute, resolve } from 'path';
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import SitemapGenerator from 'sitemap-generator'; // Properly import sitemap-generator
+import Sitemap from 'vite-plugin-sitemap';
 
 const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
 
-// Create generator
-const generator = SitemapGenerator('http://platour.net', {
-  stripQuerystring: false, // Keep query strings if present
-  filepath: resolve(outDir, 'sitemap.xml'), // Ensure the sitemap is written to the build output directory
-});
-
-// Register event listeners
-generator.on('done', () => {
-  console.log('Sitemap generated successfully!');
-});
-
-// Register error listeners (optional)
-generator.on('error', (error) => {
-  console.error('Error during sitemap generation:', error);
-});
-
-// Start the crawler
-generator.start();
-
-// Export the Vite configuration
 export default defineConfig({
   server: {
     port: 5173,
@@ -35,7 +15,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       input: {
-        // Projects
+        // Define HTML pages
         projects: resolve(root, 'assets/pages/projects.html'),
         about: resolve(root, 'assets/pages/about.html'),
         CBR: resolve(root, 'assets/pages/CBR.html'),
@@ -43,7 +23,7 @@ export default defineConfig({
         Holosports: resolve(root, 'assets/pages/Holo-sports.html'),
         Solaria: resolve(root, 'assets/pages/solaria.html'),
 
-        // Learning outcomes
+        // Learning Outcomes
         lo1: resolve(root, 'assets/pages/LO1.html'),
         lo2: resolve(root, 'assets/pages/LO2.html'),
         lo3: resolve(root, 'assets/pages/LO3.html'),
@@ -56,13 +36,26 @@ export default defineConfig({
         projectscss: resolve(root, 'assets/css/projects.css'),
         transitions: resolve(root, 'assets/css/transitions.css'),
 
-        // JS
+        // JavaScript
         loadFBX: resolve(root, 'assets/js/loadFBX.js'),
       },
       external: [
-        '/src/assets/js/loadFBX.js',
-        // Add other external modules if needed
+        '/src/assets/js/loadFBX.js', // External JS modules
       ],
     },
   },
+  plugins: [
+    Sitemap({
+      hostname: 'https://platour.net', // Replace with your site's URL
+      dynamicRoutes: [
+        
+      ],
+      exclude: ['/admin', '/private'], // Exclude specific routes
+      outDir: 'dist', // Output directory for the sitemap
+      changefreq: 'daily', // Change frequency
+      priority: 1.0, // Priority
+      lastmod: new Date(), // Last modification date
+      readable: true, // Generate a human-readable sitemap
+    }),
+  ],
 });
