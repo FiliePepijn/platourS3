@@ -4,8 +4,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 1;
 
-
 const canvas = document.querySelector('canvas.webgl');
+const loadingScreen = document.getElementById('loading-screen');
 if (!canvas) {
     throw new Error("Canvas element with class 'webgl' not found");
 }
@@ -24,7 +24,6 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 camera.position.set(0, 2, 4);
 scene.add(camera);
 
-
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enablePan = false;
@@ -39,41 +38,26 @@ directionalLight.position.set(5, 10, 20);
 scene.add(directionalLight);
 
 const loader = new GLTFLoader();
-let model;
-loader.load('/pcd/character.glb', (gltf) => { // Ensure the path is correct
-    model = gltf.scene;
-    model.scale.set(1, 1, 1); // Adjust the scale as needed
-    model.position.set(0, -4, 0); // Adjust the position as needed
-    scene.add(model);
-
-
-
-
-}, undefined, (error) => {
-    console.error(error);
-});
-
-
-
-
-
-
-const animate = () => {
-    requestAnimationFrame(animate);
-
-    // Rotate the model if it is loaded
-    if (model) {
-        model.rotation.y += 0.01 // Use the rotation speed from the debug UI
+loadingScreen.style.display = 'block';
+loader.load(
+    '/path/to/your/model.glb',
+    (gltf) => {
+        scene.add(gltf.scene);
+        loadingScreen.style.display = 'none';
+    },
+    (xhr) => {
+        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+    },
+    (error) => {
+        console.error('An error happened', error);
+        loadingScreen.style.display = 'none';
     }
+);
 
+function animate() {
+    requestAnimationFrame(animate);
     controls.update();
     renderer.render(scene, camera);
-};
+}
 
 animate();
-
-window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-});
