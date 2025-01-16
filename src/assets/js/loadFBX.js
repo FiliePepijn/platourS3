@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 1;
+
 
 const canvas = document.querySelector('canvas.webgl');
 if (!canvas) {

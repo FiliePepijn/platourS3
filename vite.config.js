@@ -1,27 +1,41 @@
 import { isAbsolute, resolve } from 'path';
 import { defineConfig } from 'vite';
-import sitemapPlugin  from 'vite-plugin-sitemap';
+import SitemapGenerator from 'sitemap-generator'; // Properly import sitemap-generator
 
 const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
 
+// Create generator
+const generator = SitemapGenerator('http://platour.net', {
+  stripQuerystring: false, // Keep query strings if present
+  filepath: resolve(outDir, 'sitemap.xml'), // Ensure the sitemap is written to the build output directory
+});
+
+// Register event listeners
+generator.on('done', () => {
+  console.log('Sitemap generated successfully!');
+});
+
+// Register error listeners (optional)
+generator.on('error', (error) => {
+  console.error('Error during sitemap generation:', error);
+});
+
+// Start the crawler
+generator.start();
+
+// Export the Vite configuration
 export default defineConfig({
   server: {
     port: 5173,
   },
   root,
-  plugins: [
-    sitemapPlugin({
-      hostname: 'https://platour.net',
-      generateRobotsTxt: true, 
-    }),
-    
-  ],
   build: {
-    chunkSizeWarningLimit: 1000, 
+    outDir,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       input: {
-        // projects
+        // Projects
         projects: resolve(root, 'assets/pages/projects.html'),
         about: resolve(root, 'assets/pages/about.html'),
         CBR: resolve(root, 'assets/pages/CBR.html'),
@@ -36,13 +50,13 @@ export default defineConfig({
         lo4: resolve(root, 'assets/pages/LO4.html'),
         lo5: resolve(root, 'assets/pages/LO5.html'),
 
-        // css
+        // CSS
         style: resolve(root, 'assets/css/style.css'),
         aboutcss: resolve(root, 'assets/css/about.css'),
         projectscss: resolve(root, 'assets/css/projects.css'),
         transitions: resolve(root, 'assets/css/transitions.css'),
 
-        // js
+        // JS
         loadFBX: resolve(root, 'assets/js/loadFBX.js'),
       },
       external: [
