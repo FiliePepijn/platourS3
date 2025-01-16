@@ -24,6 +24,8 @@ export default defineConfig({
         portfolio: resolve(root, 'assets/pages/portfolio.html'),
         Holosports: resolve(root, 'assets/pages/Holo-sports.html'),
         Solaria: resolve(root, 'assets/pages/solaria.html'),
+        lo: resolve(root, 'assets/pages/LO.html'),
+        passionproject: resolve(root, 'assets/pages/passion-project.html'),
 
         // Learning Outcomes
         lo1: resolve(root, 'assets/pages/LO1.html'),
