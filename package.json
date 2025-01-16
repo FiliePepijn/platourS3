@@ -9,23 +9,23 @@
     "preview": "vite preview --port 3000"
   },
   "devDependencies": {
-    "vite": "^5.4.11",
+    "vite": "^6.0.7",
     "vite-plugin-sitemap": "^0.7.1"
   },
   "dependencies": {
     "@microsoft/clarity": "^1.0.0",
     "@swup/fragment-plugin": "^1.1.1",
-    "@swup/head-plugin": "^2.3.0",
+    "@swup/head-plugin": "^2.3.1",
     "@swup/parallel-plugin": "^0.4.0",
-    "@swup/preload-plugin": "^3.2.10",
+    "@swup/preload-plugin": "^3.2.11",
     "@swup/scripts-plugin": "^2.1.0",
     "dat.gui": "^0.7.9",
-    "gsap": "^3.12.5",
+    "gsap": "^3.12.7",
     "jquery": "^3.7.1",
     "lil-gui": "^0.20.0",
     "pagepiling.js": "^1.5.6",
     "swup": "^4.8.1",
     "three": "^0.172.0",
-    "vite-plugin-static-copy": "^2.0.0"
+    "vite-plugin-static-copy": "^2.2.0"
   }
 }
