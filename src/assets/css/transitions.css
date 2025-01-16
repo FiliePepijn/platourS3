@@ -98,9 +98,7 @@ html.is-animating .detail-content>* {
   transform: scale(0.95);
 }
 
-/*
-* The animation between charcter details. Directional animation based on data-swup-animation
-*/
+
 #detail.is-changing {
   transition: opacity 200ms, transform 200ms;
 }

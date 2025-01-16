@@ -1,4 +1,4 @@
-import { isAbsolute, resolve } from 'path';
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import Sitemap from 'vite-plugin-sitemap';
 
@@ -16,33 +16,38 @@ export default defineConfig({
       outDir: outDir,
       routes: [
         '/',
-        '/assets/pages/lo.html',
-        '/assets/pages/about.html',
-        '/assets/pages/LO1.html',
-        '/assets/pages/LO2.html',
-        '/assets/pages/LO3.html',
-        '/assets/pages/LO4.html',
-        '/assets/pages/LO5.html'
-      ]
+        '/lo.html',
+        '/about.html',
+        '/LO1.html',
+        '/LO2.html',
+        '/LO3.html',
+        '/LO4.html',
+        '/LO5.html',
+        '/projects.html',
+        '/CBR.html',
+        '/portfolio.html',
+        '/Holo-sports.html',
+        '/solaria.html',
+      ],
     }),
   ],
   build: {
     rollupOptions: {
       input: {
         // projects
-        projects: resolve(root, 'assets/pages/projects.html'),
-        about: resolve(root, 'assets/pages/about.html'),
-        CBR: resolve(root, 'assets/pages/CBR.html'),
-        portfolio: resolve(root, 'assets/pages/portfolio.html'),
-        Holosports: resolve(root, 'assets/pages/Holo-sports.html'),
-        Solaria: resolve(root, 'assets/pages/solaria.html'),
+        projects: resolve(root, 'projects.html'),
+        about: resolve(root, 'about.html'),
+        CBR: resolve(root, 'CBR.html'),
+        portfolio: resolve(root, 'portfolio.html'),
+        Holosports: resolve(root, 'Holo-sports.html'),
+        Solaria: resolve(root, 'solaria.html'),
 
         // Learning outcomes
-        lo1: resolve(root, 'assets/pages/LO1.html'),
-        lo2: resolve(root, 'assets/pages/LO2.html'),
-        lo3: resolve(root, 'assets/pages/LO3.html'),
-        lo4: resolve(root, 'assets/pages/LO4.html'),
-        lo5: resolve(root, 'assets/pages/LO5.html'),
+        lo1: resolve(root, 'LO1.html'),
+        lo2: resolve(root, 'LO2.html'),
+        lo3: resolve(root, 'LO3.html'),
+        lo4: resolve(root, 'LO4.html'),
+        lo5: resolve(root, 'LO5.html'),
 
         // css
         style: resolve(root, 'assets/css/style.css'),
@@ -53,10 +58,6 @@ export default defineConfig({
         // js
         loadFBX: resolve(root, 'assets/js/loadFBX.js'),
       },
-      external: [
-        '/src/assets/js/loadFBX.js',
-        // Add other external modules if needed
-      ],
     },
   },
 });
