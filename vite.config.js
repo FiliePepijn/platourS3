@@ -17,6 +17,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         // Define HTML pages
+        index: resolve(root, 'index.html'),
         projects: resolve(root, 'assets/pages/projects.html'),
         about: resolve(root, 'assets/pages/about.html'),
         CBR: resolve(root, 'assets/pages/CBR.html'),
