@@ -1,6 +1,5 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import Sitemap from 'vite-plugin-sitemap';
 
 const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
@@ -48,18 +47,5 @@ export default defineConfig({
       ],
     },
   },
-  plugins: [
-    Sitemap({
-      hostname: 'https://platour.net', // Replace with your site's URL
-      dynamicRoutes: [
-        
-      ],
-      exclude: ['/admin', '/private'], // Exclude specific routes
-      outDir: 'dist', // Output directory for the sitemap
-      changefreq: 'daily', // Change frequency
-      priority: 1.0, // Priority
-      lastmod: new Date(), // Last modification date
-      readable: true, // Generate a human-readable sitemap
-    }),
-  ],
+  plugins: [],
 });
