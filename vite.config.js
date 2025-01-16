@@ -12,6 +12,7 @@ export default defineConfig({
   root,
   build: {
     outDir,
+    emptyOutDir: true,
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       input: {
