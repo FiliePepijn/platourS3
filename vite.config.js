@@ -1,6 +1,6 @@
 import { isAbsolute, resolve } from 'path';
 import { defineConfig } from 'vite';
-import Sitemap from 'vite-plugin-sitemap';
+import sitemapPlugin  from 'vite-plugin-sitemap';
 
 const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
@@ -11,28 +11,14 @@ export default defineConfig({
   },
   root,
   plugins: [
-    Sitemap({
-      hostname: 'https://platour.net/',
-      outDir: outDir,
-      routes: [
-        '/',
-        '/assets/pages/lo.html',
-        '/assets/pages/about.html',
-        '/assets/pages/LO1.html',
-        '/assets/pages/LO2.html',
-        '/assets/pages/LO3.html',
-        '/assets/pages/LO4.html',
-        '/assets/pages/LO5.html',
-        '/assets/pages/projects.html',
-        '/assets/pages/CBR.html',
-        '/assets/pages/portfolio.html',
-        '/assets/pages/Holo-sports.html',
-        '/assets/pages/solaria.html',
-        
-      ]
+    sitemapPlugin({
+      hostname: 'https://platour.net',
+      generateRobotsTxt: true, 
     }),
+    
   ],
   build: {
+    chunkSizeWarningLimit: 1000, 
     rollupOptions: {
       input: {
         // projects
