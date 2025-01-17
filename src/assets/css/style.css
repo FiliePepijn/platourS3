@@ -202,3 +202,91 @@ canvas.webgl {
 }
 
 
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        top: 2%;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        padding: 0.25rem;
+    }
+
+    .item {
+        width: 100px;
+        font-size: 1rem;
+        height: 30px;
+    }
+
+    .glider {
+        height: 30px;
+        width: 100px;
+    }
+
+    .section {
+        font-size: 1.5rem;
+        margin-left: 2%;
+    }
+
+    .section h1 {
+        font-size: 5rem;
+    }
+
+    .section button {
+        font-size: 1rem;
+        width: 60px;
+        height: 40px;
+    }
+
+    .background-svg {
+        height: auto;
+    }
+
+    .header-svg {
+        max-height: 50vh;
+    }
+
+    #loading-screen {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+/* Media Queries for Smaller Mobile Devices */
+@media (max-width: 480px) {
+    .item {
+        width: 80px;
+        font-size: 0.875rem;
+        height: 25px;
+    }
+
+    .glider {
+        height: 25px;
+        width: 80px;
+    }
+
+    .section {
+        font-size: 1.25rem;
+        margin-left: 1%;
+    }
+
+    .section h1 {
+        font-size: 4rem;
+    }
+
+    .section button {
+        font-size: 0.875rem;
+        width: 50px;
+        height: 35px;
+    }
+
+    .header-svg {
+        max-height: 40vh;
+    }
+
+    #loading-screen {
+        font-size: 16px;
+        padding: 5px;
+    }
+}
