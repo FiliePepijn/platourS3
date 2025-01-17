@@ -202,6 +202,47 @@ canvas.webgl {
 }
 
 
+/* Social Media Links */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: var(--blue);
+    font-size: 2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    color: var(--red);
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .social-media {
+        gap: 15px;
+    }
+
+    .social-media a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media Queries for Smaller Mobile Devices */
+@media (max-width: 480px) {
+    .social-media {
+        gap: 10px;
+    }
+
+    .social-media a {
+        font-size: 1.25rem;
+    }
+}
+
+
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     nav {
